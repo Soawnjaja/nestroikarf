@@ -9,6 +9,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-bottom: 20px;
     }
     
     .container {
@@ -21,12 +22,20 @@
         color: #fff !important;
     } */
     
-    .section-hero {
-        background-image: url('../images/bg.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 90% 20%;
-        height: 100vh;
+    .main__bg {
+        padding-top: 2em;
+    }
+    
+    .main__bg::after {
+        background-color: rgba(44, 62, 80, 0.3);
+        background-image: url("../images/pattern.png");
+        background-repeat: repeat;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 0;
     }
     
     @media screen and (max-width: 580px) {
@@ -41,13 +50,15 @@
         font-weight: 300;
         margin-top: 0px;
         margin-bottom: 8px;
+        z-index: 1;
     }
     
     h1 {
         font-size: 36px;
-        color: #050505;
-        margin-top: 251px;
+        color: hsl(35, 91%, 37%);
+        margin-top: 80px;
         font-weight: 800;
+        z-index: 44;
     }
     
     h2 {
@@ -139,14 +150,6 @@
         }
     }
     
-    .section-hero {
-        background-image: url('../images/bg.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 30% 20%;
-        height: 100vh;
-    }
-    
     @media screen and (max-width: 580px) {
         nav {
             height: auto;
@@ -221,9 +224,9 @@
         .section-hero h2 {
             font-size: 24px;
         }
-        .section-hero p {
+        /* .section-hero p {
             display: none;
-        }
+        } */
     }
     /* overview */
     
@@ -273,7 +276,7 @@
         text-transform: uppercase;
         font-weight: 800;
         font-size: 14px;
-        letter-spacing: 12px;
+        letter-spacing: 6px;
         margin-bottom: 2em;
     }
     /* features */
@@ -281,6 +284,10 @@
     #features {
         background: #282627;
         padding: 8em 0;
+    }
+    
+    .services__title {
+        padding-top: 30px;
     }
     
     .features-content {
@@ -303,6 +310,14 @@
             grid-template-columns: repeat(1, 1fr);
             text-align: left;
         }
+    }
+    
+    .btn__block {
+        padding: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
     /* subscribe section */
     
